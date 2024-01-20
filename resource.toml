@@ -1,0 +1,13 @@
+type = "js"
+main = "server/server.js"
+deps = [ 
+    "chat",
+    "discord-auth",
+    "tr-core",
+]
+required-permissions = ["Screen Capture"]
+client-main = "client/index.ts"
+client-files = [
+    "client/*",
+    "shared/*"
+]
