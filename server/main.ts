@@ -9,7 +9,28 @@ let Glovebox = {}
 let Stashes = {}
 let ShopItems = {}
 
-export function LoadInventory(player: PlayerData, citzenid: string) {
-	let inventory // = MYSQL Func
-	let loadedInventory
+export function LoadDrops(player: alt.Player, charid: string) {
+	let drops; // = MYSQL Func
+
+	drops = player.getMeta('drops');
+
+	let loadedDrops:string = JSON.stringify(drops);
+}
+
+export interface InventoryItem {
+	name: string;
+	label: string;
+	amount: number;
+	type: string;
+	description: string;
+	image: string;
+	data: any;
+}
+
+export function LoadInventory(player: alt.Player, charid: string) {
+    let inventory = player.getMeta('inventory') as string;
+
+    if (inventory !== undefined && inventory !== null) {
+        let loadedInventory: InventoryItem[] = JSON.parse(inventory);
+    }
 }
