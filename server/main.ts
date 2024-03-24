@@ -34,3 +34,17 @@ export function LoadInventory(player: alt.Player, charid: string) {
         let loadedInventory: InventoryItem[] = JSON.parse(inventory);
     }
 }
+
+export function GetItemSlot(player: alt.Player, item: InventoryItem, Sitem: string) {
+    let slot = player.getMeta('inventory') as InventoryItem[];
+
+    /* if (slot!== undefined && slot!== null) {
+        let loadedInventory: InventoryItem[] = JSON.parse();
+    }
+	*/
+
+	
+	slot.filter(item => item.name == Sitem);
+
+	return slot;
+}
