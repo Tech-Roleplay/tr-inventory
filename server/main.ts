@@ -1,7 +1,7 @@
 /// <reference types="@altv/types-server" />
 
 import * as alt from 'alt-server';
-import { PlayerData } from '../../tr-core/server/player';
+import {  } from '../../tr-core/server/player';
 
 let Drops = {}
 let Trunks = {}
